@@ -1,9 +1,9 @@
-from typing import Sequence
+from typing import List
 import pytest
 from random import randint
 
 
-def countingsort(arr, exp):
+def countingsort(arr: list, exp: int) -> List:
     def get_current_digit(number, exponent=exp):
         return (number // exponent) % 10
 
@@ -29,7 +29,7 @@ def countingsort(arr, exp):
     return arr
 
 
-def radixsort(arr):
+def radixsort(arr: List) -> List:
     if not arr:
         return []
 
